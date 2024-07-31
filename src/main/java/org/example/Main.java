@@ -3,6 +3,12 @@ package org.example;
 import java.time.LocalDate;
 import java.util.List;
 
+//Программа состоит из трех классов:
+//
+//Main - точка входа в приложение, инициализация данных и запуск расчетов.
+//CoursePlanner - класс, выполняющий основные расчеты, связанные с продолжительностью курса.
+//DateUtils - вспомогательный класс для работы с датами, включая проверку выходных и праздничных дней.
+
 public class Main {
     public static void main(String[] args) {
         // Входные данные
