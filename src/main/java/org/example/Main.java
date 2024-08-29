@@ -12,25 +12,25 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         // Входные данные
-        // Метод main является точкой входа в программу. Он инициализирует данные, необходимые для выполнения расчетов,
-        // создает экземпляр CoursePlanner и запускает метод printResults.
+        // Метод main является точкой входа в программу.
+        // Здесь мы создаем объект CoursePlanner, который управляет данными курса и выполняет необходимые расчеты.
+        // Создание объекта CoursePlanner с указанием начальной даты, конечной даты и количества запланированных дней.
+        CoursePlanner planner = getCoursePlanner(
+                LocalDate.parse("2024-02-02"),  // Дата начала курса
+                LocalDate.parse("2024-07-18")  // Дата окончания курса
+        );
 
-        LocalDate startDate = LocalDate.parse("2024-02-02"); // startDate: Начальная дата курса, создается с использованием метода parse класса LocalDate.
-        LocalDate endDate = LocalDate.parse("2024-07-18"); // endDate: Конечная дата курса, создается аналогично.
-        int plannedDays = 90; // plannedDays: Количество запланированных дней для завершения курса.
-
-        // Создание экземпляра CoursePlanner и выполнение расчетов
-        CoursePlanner planner = getCoursePlanner(startDate, endDate, plannedDays);
+        // Вывод результатов расчета курса на экран.
+        // Метод printResults выводит на экран все важные параметры и расчеты, связанные с курсом.
         planner.printResults();
     }
 
-    private static CoursePlanner getCoursePlanner(LocalDate startDate, LocalDate endDate, int plannedDays) {
+    private static CoursePlanner getCoursePlanner(LocalDate startDate, LocalDate endDate) {
     // Список праздничных дней
 //        getCoursePlanner: Метод для создания и инициализации экземпляра CoursePlanner.
 //      Параметры:
 //        LocalDate startDate: Начальная дата курса.
 //        LocalDate endDate: Конечная дата курса.
-//        int plannedDays: Количество запланированных дней для завершения курса.
 //        Возвращаемое значение: Новый экземпляр CoursePlanner с инициализированными данными.
 //
 //      Логика:
@@ -54,6 +54,6 @@ public class Main {
         );
 
         // Возвращает новый экземпляр CoursePlanner с инициализированными данными
-        return new CoursePlanner(startDate, endDate, plannedDays, holidays, workingWeekends);
+        return new CoursePlanner(startDate, endDate, 90, holidays, workingWeekends);
     }
 }

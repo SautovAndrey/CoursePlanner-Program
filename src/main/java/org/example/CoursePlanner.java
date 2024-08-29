@@ -75,7 +75,7 @@ public class CoursePlanner {
         System.out.println("Дни прокрастинации и рабочие дни, когда я не учился: " + procrastinationDays);
         System.out.println("Количество рабочих дней, потраченных на курс: " + workingDays);
         System.out.println("Общее количество дней когда я не учился: " + (weekendsAndHolidays + procrastinationDays) +
-                ", или " + String.format("%.1f", (float)(weekendsAndHolidays + procrastinationDays) / 30.44) + " месяцев");
+                ", или " + String.format("%.1f", (float)(weekendsAndHolidays + procrastinationDays) / 30.44) + " месяцев"); //30.44 среднее количество дней в месяце
 //      Назначение:
 //        Выводит результаты расчетов на экран.
 //
