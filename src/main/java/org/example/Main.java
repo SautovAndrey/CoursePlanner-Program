@@ -20,13 +20,11 @@ public class Main {
                 LocalDate.parse("2024-07-18")  // Дата окончания курса
         );
 
-        // Вывод результатов расчета курса на экран.
         // Метод printResults выводит на экран все важные параметры и расчеты, связанные с курсом.
         planner.printResults();
     }
 
     private static CoursePlanner getCoursePlanner(LocalDate startDate, LocalDate endDate) {
-    // Список праздничных дней
 //        getCoursePlanner: Метод для создания и инициализации экземпляра CoursePlanner.
 //      Параметры:
 //        LocalDate startDate: Начальная дата курса.
@@ -37,6 +35,8 @@ public class Main {
 //        Создает список праздничных дней (holidays) с использованием метода List.of и LocalDate.parse для каждой даты.
 //        Создает список рабочих выходных (workingWeekends) аналогично списку праздничных дней.
 //                Возвращает новый экземпляр CoursePlanner, передавая все инициализированные данные в его конструктор.
+
+        // Список праздничных дней
         List<LocalDate> holidays = List.of(
                 LocalDate.parse("2024-02-23"),
                 LocalDate.parse("2024-03-08"),
